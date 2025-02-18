@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 8px;
+        font-size: 16px;
+      }
+      button {
+        padding: 8px 12px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Palindrome Checker</h1>
+    <form method="POST">
+      <input type="text" name="word" placeholder="Enter a word" required />
+      <button type="submit">Check</button>
+    </form>
+
+    {% if result is not none %} {% if result %}
+    <p style="color: green">"{{ word }}" is a palindrome!</p>
+    {% else %}
+    <p style="color: red">"{{ word }}" is NOT a palindrome.</p>
+    {% endif %} {% endif %}
+  </body>
+</html>
